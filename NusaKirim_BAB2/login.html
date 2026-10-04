@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Login - NusaKirim</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="logo">
+            <img src="assets/logo.png" alt="Logo NusaKirim" />
+          </div>
+          <input type="checkbox" id="click" />
+          <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#jalur">Kategori</a></li>
+            <li><a href="login.html" class="btn_login">Login</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="auth-split">
+          <div class="auth-illust">
+            <img src="assets/darat.png" alt="Ilustrasi pengiriman darat" />
+          </div>
+          <div class="auth-form">
+            <div class="form-login">
+              <div class="logo">
+                <img src="assets/logo.png" alt="Logo NusaKirim" />
+              </div>
+              <h3>Masuk ke Akun Anda</h3>
+              <p class="subtitle">
+                Kelola pengiriman NusaKirim Anda di satu tempat
+              </p>
+              <form action="">
+                <input
+                  class="input"
+                  type="text"
+                  name="username"
+                  placeholder="Username"
+                />
+                <input
+                  class="input"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                />
+                <button type="submit" class="btn_login">Login</button>
+              </form>
+              <span class="link-register"
+                >Belum punya akun? <a href="register.html">Daftar di sini</a></span
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <h4>&copy; Praktikum Pemrograman Website 2026</h4>
+      </footer>
+    </div>
+  </body>
+</html>
