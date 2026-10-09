@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/icon.png" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>NusaKirim Admin | Pengiriman</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <img src="../assets/icon.png" alt="" />
+        <span class="logo_name">NusaKirim</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="../admin.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="../jalur/jalur.html">
+            <i class="bx bx-box"></i>
+            <span class="links_name">Jalur Pengiriman</span>
+          </a>
+        </li>
+        <li>
+          <a href="pengiriman.html" class="active">
+            <i class="bx bx-list-ul"></i>
+            <span class="links_name">Pengiriman</span>
+          </a>
+        </li>
+        <li>
+          <a href="../index.html">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+        </div>
+        <div class="profile-details">
+          <img src="../assets/avatar.png" alt="" />
+          <span class="admin_name">Saverio Eudes S.</span>
+        </div>
+      </nav>
+
+      <div class="home-content">
+        <h1>Pengiriman</h1>
+        <p class="subtitle">Riwayat seluruh pengiriman yang tercatat di NusaKirim</p>
+
+        <div class="panel">
+          <table class="table-data">
+            <thead>
+              <tr>
+                <th>No. Resi</th>
+                <th>Pengirim</th>
+                <th>Tujuan</th>
+                <th>Jalur</th>
+                <th>Status</th>
+                <th>Tanggal</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="strong">NK-2026-001</td>
+                <td>Budi Santoso</td>
+                <td>Surabaya &rarr; Medan</td>
+                <td>Darat</td>
+                <td><span class="pill selesai">Selesai</span></td>
+                <td>12 Sep 2026</td>
+                <td>
+                  <button
+                    class="btn_detail"
+                    onclick="showDetail('NK-2026-001','Budi Santoso','Surabaya → Medan','Darat','Selesai','12 Sep 2026')"
+                  >
+                    Detail
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="strong">NK-2026-002</td>
+                <td>Siti Aminah</td>
+                <td>Jakarta &rarr; Makassar</td>
+                <td>Laut</td>
+                <td><span class="pill dikirim">Dikirim</span></td>
+                <td>18 Sep 2026</td>
+                <td>
+                  <button
+                    class="btn_detail"
+                    onclick="showDetail('NK-2026-002','Siti Aminah','Jakarta → Makassar','Laut','Dikirim','18 Sep 2026')"
+                  >
+                    Detail
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="strong">NK-2026-003</td>
+                <td>Andi Wijaya</td>
+                <td>Bandung &rarr; Denpasar</td>
+                <td>Udara</td>
+                <td><span class="pill diproses">Diproses</span></td>
+                <td>22 Sep 2026</td>
+                <td>
+                  <button
+                    class="btn_detail"
+                    onclick="showDetail('NK-2026-003','Andi Wijaya','Bandung → Denpasar','Udara','Diproses','22 Sep 2026')"
+                  >
+                    Detail
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="strong">NK-2026-004</td>
+                <td>Maya Sari</td>
+                <td>Semarang &rarr; Balikpapan</td>
+                <td>Laut</td>
+                <td><span class="pill dikirim">Dikirim</span></td>
+                <td>23 Sep 2026</td>
+                <td>
+                  <button
+                    class="btn_detail"
+                    onclick="showDetail('NK-2026-004','Maya Sari','Semarang → Balikpapan','Laut','Dikirim','23 Sep 2026')"
+                  >
+                    Detail
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="strong">NK-2026-005</td>
+                <td>Rudi Hartono</td>
+                <td>Surabaya &rarr; Manado</td>
+                <td>Udara</td>
+                <td><span class="pill selesai">Selesai</span></td>
+                <td>25 Sep 2026</td>
+                <td>
+                  <button
+                    class="btn_detail"
+                    onclick="showDetail('NK-2026-005','Rudi Hartono','Surabaya → Manado','Udara','Selesai','25 Sep 2026')"
+                  >
+                    Detail
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };
+
+      function showDetail(resi, pengirim, tujuan, jalur, status, tanggal) {
+        alert(
+          "No. Resi: " + resi +
+          "\nPengirim: " + pengirim +
+          "\nTujuan: " + tujuan +
+          "\nJalur: " + jalur +
+          "\nStatus: " + status +
+          "\nTanggal: " + tanggal
+        );
+      }
+    </script>
+  </body>
+</html>
