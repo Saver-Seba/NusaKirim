@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Home - NusaKirim</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="logo">
+            <img src="assets/logo.png" alt="Logo NusaKirim" />
+          </div>
+          <input type="checkbox" id="click" />
+          <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+            <li><a href="index.php" class="active">Home</a></li>
+            <li><a href="index.php#jalur">Kategori</a></li>
+            <li><a href="login.php" class="btn_login">Login</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="jumbotron">
+          <div class="jumbotron-text">
+            <span class="pill-tag">LOGISTIK &amp; DISTRIBUSI</span>
+            <p id="sapaan" class="sapaan-text"></p>
+            <h1>Kirim Barang Lebih Cepat, Distribusi Lebih Tepat</h1>
+            <p>
+              Kelola pengiriman dan distribusi barangmu dari gudang sampai
+              tujuan dengan satu platform, ayo mulai sekarang.
+            </p>
+            <button type="button" id="btnMulai" class="btn">Mulai Kirim</button>
+          </div>
+          <div class="jumbotron-img">
+            <img src="assets/jumbotron.png" alt="Ilustrasi gudang dan truk NusaKirim" />
+          </div>
+        </div>
+
+        <div class="cards-categories" id="jalur">
+          <h2>Pilih Jalur Pengiriman</h2>
+          <p class="subtitle">
+            Tiga jalur distribusi yang bisa kamu sesuaikan dengan kebutuhan
+          </p>
+          <span id="jumlah-jalur" class="jalur-count"></span>
+          <div class="card-categories">
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/darat.png" alt="Ilustrasi pengiriman darat" />
+              </div>
+              <div class="card-content">
+                <h5>Darat</h5>
+                <p class="description">
+                  Pengiriman antarkota dengan armada truk, cocok untuk barang
+                  dalam jumlah besar.
+                </p>
+                <p class="card-hint">Lihat jalur ini &rarr;</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/laut.png" alt="Ilustrasi pengiriman laut" />
+              </div>
+              <div class="card-content">
+                <h5>Laut</h5>
+                <p class="description">
+                  Pengiriman antarpulau memakai kapal kontainer, hemat biaya
+                  untuk jarak jauh.
+                </p>
+                <p class="card-hint">Lihat jalur ini &rarr;</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/udara.png" alt="Ilustrasi pengiriman udara" />
+              </div>
+              <div class="card-content">
+                <h5>Udara</h5>
+                <p class="description">
+                  Pengiriman kilat lewat kargo pesawat untuk barang yang
+                  butuh sampai cepat.
+                </p>
+                <p class="card-hint">Lihat jalur ini &rarr;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <h4>&copy; <span id="tahun"></span> Praktikum Pemrograman Website</h4>
+      </footer>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
